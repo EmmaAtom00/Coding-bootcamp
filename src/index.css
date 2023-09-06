@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: inter;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('./assets/images/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 20px;
+    background-size: 90%;
+  }
+
+  @media screen and (min-width: 768px) {
+    body {
+      background-size: 50%;
+      background-position: 100% 190px;
+    }
+
+    .hero-img {
+      float: right;
+      width: 40%;
+      height: 50%;
+    }
+
+    .wrapper {
+      padding-top: 0;
+      height: fit-content;
+      /* overflow: hidden; */
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10%;
+    }
+
+    .texts {
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .controller {
+      margin-left: 140px;
+      box-shadow: 0px 10px 12px rgba(138, 136, 136, 0.178);
+    }
+
+    .together {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+    }
+
+    .quote {
+      margin-top: 20%;
+    }
+
+    .bot {
+      bottom: 0%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .wrapper {
+      left: 20%;
+    }
+
+    .controller {
+      margin-left: 160px;
+      box-shadow: 0px 10px 12px rgba(138, 136, 136, 0.178);
+    }
+
+    body {
+      background-size: 30%;
+      background-position: 80% 190px;
+    }
+  }
+}
